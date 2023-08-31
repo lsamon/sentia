@@ -1,0 +1,10 @@
+{
+  "name": "sentia",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Louis Amon <louis.amon@amazutech.net>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}

@@ -1,0 +1,33 @@
+<div class='container'>
+  <%= link_to 'Go Back', root_path %>
+  <br />
+  <br />
+  <form action="/">
+        <input placeholder="Name", name="name", type="text"/>
+        <button type="submit">Search</button>
+  </form>
+
+  <table id="users-datatable" data-source="<%= people_path(format: :json) %>">
+    <thead>
+      <th><%= sortable "first_name" %></th>
+      <th><%= sortable "last_name" %></th>
+      <th><%= sortable "species" %></th>
+      <th><%= sortable "gender" %></th>
+      <th><%= sortable "weapon" %></th>
+      <th><%= sortable "vehicle" %></th>
+    </thead>
+    <tbody>
+      <% @people.each do |person| %>
+        <tr>
+          <td><%= person.first_name %></td>
+          <td><%= person.last_name %></td>
+          <td><%= person.species %></td>
+          <td><%= person.gender %></td>
+          <td><%= person.weapon %></td>
+          <td><%= person.vehicle %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @people %>
+</div>

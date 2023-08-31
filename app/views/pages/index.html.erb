@@ -1,0 +1,8 @@
+<div class="container">
+  <%= form_with url: "/import-people", method: :post do |form| %>
+  <%= form.file_field :upload %>
+  <%= form.submit "Upload" %>
+  <% end %>
+  <br/>
+  <%= link_to 'People List', people_path %>
+</div>
