@@ -9,6 +9,8 @@ gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem 'pg'
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
@@ -31,8 +33,6 @@ gem "jbuilder"
 gem "redis", "~> 4.0"
 
 gem "kaminari"
-
-gem "ajax-datatables-rails"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"

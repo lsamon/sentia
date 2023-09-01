@@ -1,8 +1,8 @@
 <div class='container'>
-  <%= link_to 'Go Back', root_path %>
+  <%= link_to 'Go Back', 'javascript:history.back()' %>
   <br />
   <br />
-  <form action="/">
+  <form action="<%= people_path %>">
         <input placeholder="Name", name="name", type="text"/>
         <button type="submit">Search</button>
   </form>

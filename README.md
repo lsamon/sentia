@@ -30,25 +30,18 @@ You need to have Docker and Docker Compose installed on your machine to run this
     ```
     docker-compose build
     ```
-4. **Run database migrations:**
-
+4. **Start docker container:**
     ```
-    docker-compose exec web rails db:create
-    ```
-
-5. **Run database migrations:**
-
-    ```
-    docker-compose exec web rails db:migrate
+    docker-compose up -d
     ```
 
-## Running the application
+5. **Run database setup:**
 
-To run the server:
+    ```
+    docker-compose exec web rails db:setup
+    ```
 
-```
-docker-compose up
-```
+## Accessing the application
 
 After running this command, the application should be accessible at `http://localhost:3000` or `http://0.0.0.0:3000`
 
@@ -67,4 +60,5 @@ To access the Rails console:
 ```
 docker-compose exec web rails console
 ```
+
 
